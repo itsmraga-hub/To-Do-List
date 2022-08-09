@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f0e9415ee2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>To Do list</title>
+  </head>
+  <body class="flex-column">
+    <main class="main-container">
+      <div class="container">
+        <div class="container-header">
+          <h3 class="container-heading">Today's To Do</h3>
+          <i class="fa-solid fa-rotate"></i>
+        </div>
+        <div class="input">
+          <input
+            type="text"
+            placeholder="Add to your list..."
+            id="new-task"
+            class="new-input"
+          />
+          <svg
+            width="16px"
+            height="16px"
+            viewBox="0 0 1024 1024"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon"
+          >
+            <path
+              d="M864 170h-60c-4.4 0-8 3.6-8 8v518H310v-73c0-6.7-7.8-10.5-13-6.3l-141.9 112a8 8 0 0 0 0 12.6l141.9 112c5.3 4.2 13 .4 13-6.3v-75h498c35.3 0 64-28.7 64-64V178c0-4.4-3.6-8-8-8z"
+            />
+          </svg>
+        </div>
+        <ul class="tasks-list"></ul>
+        <button type="button" class="btn btn-clear" id="btnClear">
+          Clear all completed
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
