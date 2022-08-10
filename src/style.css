@@ -49,6 +49,11 @@ body {
   padding-right: 1em;
 }
 
+.main-container .container .input .add-btn {
+  background-color: #fff;
+  border: none;
+}
+
 .main-container .container .input .new-input {
   width: 100%;
   font-size: 1em;
@@ -62,11 +67,14 @@ body {
   outline: none;
 }
 
-.main-container .container .input svg {
+.main-container .container .input .add-btn svg {
   cursor: pointer;
   z-index: 10000;
 }
 
+.hidden {
+  display: none;
+}
 .main-container .container .tasks-list {
   list-style: none;
   width: 100%;
@@ -75,15 +83,34 @@ body {
 .main-container .container .tasks-list .task {
   display: flex;
   justify-content: space-between;
-  padding: 0.75em 1em;
+  padding: 0 1em;
   border-bottom: 1px solid #aaa;
   font-weight: 100;
   align-items: center;
 }
 
 .main-container .container .tasks-list .task .task-desc {
+  width: 100%;
   display: flex;
   align-items: center;
+}
+
+.main-container .container .tasks-list .task .task-desc .task-edit {
+  border: none;
+  padding: 1.25em;
+  width: 100%;
+  outline: none;
+}
+
+.main-container .container .tasks-list .task .task-desc .task-edit:focus {
+  background-color: #ffffa7;
+}
+
+.main-container .container .tasks-list .task .task-desc .task-edit:disabled {
+  border: none;
+  padding: 1.25em;
+  width: 100%;
+  outline: none;
 }
 
 .main-container .container .tasks-list .task .task-desc input {
@@ -93,6 +120,10 @@ body {
 .main-container .container .tasks-list .task .task-desc input.toggle-check {
   width: 1.5em;
   height: 1.5em;
+}
+
+.main-container .container .tasks-list .task .task-desc .description {
+  width: 100%;
 }
 
 .main-container .container .btn {
