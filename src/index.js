@@ -54,6 +54,7 @@ document.querySelector('#addBtn').addEventListener('click', () => {
   displayTasks(tasks);
 });
 
+// Event listener to add task on Enter keypress
 document.querySelector('.input').addEventListener('keypress', (e) => {
   if (e.key === 'Enter' && (e.target.value)) {
     createTask(taskDesc);
@@ -74,6 +75,7 @@ const editTask = (e) => {
   });
 };
 
+// Event listener to edit
 taskListContainer.addEventListener('click', (e) => {
   if (e.target.disabled === true) {
     e.target.disabled = false;
