@@ -75,6 +75,7 @@ body {
 .hidden {
   display: none;
 }
+
 .main-container .container .tasks-list {
   list-style: none;
   width: 100%;
