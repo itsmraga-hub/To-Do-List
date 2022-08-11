@@ -1,5 +1,6 @@
 import './style.css';
 import { Task, loadFromStorage } from './modules/addRemove.js';
+import { checkIfChecked, clearCompleteTasks } from './modules/status.js';
 
 let tasks = [];
 
@@ -8,14 +9,25 @@ const taskListContainer = document.querySelector('.tasks-list');
 const displayTasks = (tasks) => {
   taskListContainer.innerHTML = '';
   for (let i = 0; i < tasks.length; i += 1) {
-    taskListContainer.innerHTML += `<li class="task" id=${i} data-id="${tasks[i].index}">
+    if (tasks[i].isComplete) {
+      taskListContainer.innerHTML += `<li class="task" id=${i} data-id="${tasks[i].index}">
     <div class="task-desc">
-      <input type="checkbox" name="task" class="toggle-check" />
-      <input class="task-edit" value="${tasks[i].description}" disabled autofocus/>
+      <input type="checkbox" name="task" class="toggle-check" checked />
+      <input style="text-decoration: line-through" class="task-edit" value="${tasks[i].description}" disabled/>
     </div>
     <i class="fa-solid fa-ellipsis-vertical "></i>
     <i class="fa-solid fa-trash-can hidden"></i>
   </li>`;
+    } else {
+      taskListContainer.innerHTML += `<li class="task" id=${i} data-id="${tasks[i].index}">
+        <div class="task-desc">
+          <input type="checkbox" name="task" class="toggle-check" />
+          <input class="task-edit" value="${tasks[i].description}" disabled/>
+        </div>
+        <i class="fa-solid fa-ellipsis-vertical "></i>
+        <i class="fa-solid fa-trash-can hidden"></i>
+      </li>`;
+    }
   }
 };
 
@@ -86,3 +98,29 @@ taskListContainer.addEventListener('click', (e) => {
 
 tasks = loadFromStorage();
 displayTasks(tasks);
+
+// All clear function
+const allClear = document.querySelector('#btnClear');
+allClear.addEventListener('click', () => {
+  tasks = clearCompleteTasks(tasks);
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+  displayTasks(tasks);
+});
+
+// Event listener to mark task as complete
+taskListContainer.addEventListener('click', (e) => {
+  if (e.target.nodeName === 'INPUT' && e.target.type === 'checkbox') {
+    if (e.target.checked) {
+      e.target.parentElement.children[1].style.textDecoration = 'line-through';
+    } else {
+      e.target.parentElement.children[1].style.textDecoration = 'none';
+    }
+    const i = e.target.parentElement.parentElement.id;
+    checkIfChecked(tasks, e.target, i);
+  }
+});
+
+document.querySelector('#refresh').addEventListener('click', () => {
+  document.querySelector('#refresh').style.transform = 'rotate(720deg)';
+  document.location.reload();
+});
