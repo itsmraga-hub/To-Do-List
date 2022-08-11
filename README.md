@@ -4,7 +4,7 @@
 
 ## Live Preview
 
-> [Click here to view Live Page](https://)
+> [Click here to view Live Page](https://itsmraga-hub.github.io/To-Do-List/)
 
 ## Built with
 
