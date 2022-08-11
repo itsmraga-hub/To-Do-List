@@ -16,6 +16,7 @@ module.exports = {
 	output: {
 		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist'),
+		publicPath: "/To-Do-List/",
 		clean: true,
 	},
 	optimization: {
