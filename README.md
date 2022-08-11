@@ -22,17 +22,17 @@
 
 - ### Mobile Version
 
-  [!screenshot](./src/assets/To-Do-Mobile.png)
+  ![screenshot](./src/assets/To-Do-Mobile.png)
 
 - ### Desktop Version
 
-  [!screenshot](./src/assets/To-Do-desktop.png)
+  ![screenshot](./src/assets/To-Do-desktop.png)
 
 - ### Interactive List
 
   - Easily edit and delete tasks on a single click
 
-  [!screenshot](./src/assets/Tp-Do-Edit.png)
+  ![screenshot](./src/assets/Tp-Do-Edit.png)
 
 ### Prerequisites
 
