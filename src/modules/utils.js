@@ -25,9 +25,7 @@ class Task {
   }
 
   deleteTask = (id) => {
-    console.log(localStorageMock.length);
     localStorageMock.splice(id, 1);
-    console.log(localStorageMock.length);
     return localStorageMock;
   }
 }
