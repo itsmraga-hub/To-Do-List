@@ -1,11 +1,6 @@
-// import localStorage from './__mocks__/localStorage.js';
-// import 'jest-localstorage-mock';
 import localStorageMock from './__mocks__/localStorage.js';
 
-// const localStorageMock = require('./__mocks__/localStorage.js');
-
 const Task = require('./modules/utils.js');
-
 const task = new Task('Wash dishes', 0, false);
 const t = new Task('Code', 1, false);
 
