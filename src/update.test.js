@@ -1,7 +1,7 @@
 import { checkIfChecked, clearCompleteTasks, editTask } from './modules/editutils.js';
 import localStorageMock from './__mocks__/localStorage.js';
 
-describe("Task and LocalStrage Update and Status Change Tests", () => {
+describe('Task and LocalStrage Update and Status Change Tests', () => {
   test('Edit task', () => {
     expect(editTask(localStorageMock, 0, 'Edit')).toEqual(localStorageMock[0]);
     expect(editTask(localStorageMock, 1, 'Chess')).toEqual(localStorageMock[1]);
