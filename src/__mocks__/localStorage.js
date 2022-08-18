@@ -1,26 +1,26 @@
 const localStorageMock = [
   {
-    description: 'QWerty',
+    description: 'Task1',
     index: 1,
     isComplete: false,
   },
   {
-    description: 'QWerty',
+    description: 'Task2',
     index: 1,
     isComplete: false,
   },
   {
-    description: 'QWerty',
+    description: 'Task3',
     index: 1,
-    isComplete: false,
+    isComplete: true,
   },
   {
-    description: 'QWerty',
+    description: 'Task4',
     index: 1,
-    isComplete: false,
+    isComplete: true,
   },
   {
-    description: 'QWerty',
+    description: 'Task5',
     index: 1,
     isComplete: false,
   },
